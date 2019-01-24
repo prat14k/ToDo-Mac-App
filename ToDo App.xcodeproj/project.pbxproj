@@ -13,6 +13,7 @@
 		AB7CC58021F9BE7800BA3CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB7CC57E21F9BE7800BA3CED /* Main.storyboard */; };
 		AB7CC58921F9D35E00BA3CED /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CC58821F9D35E00BA3CED /* RealmService.swift */; };
 		AB7CC58B21F9DAD300BA3CED /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CC58A21F9DAD300BA3CED /* ToDoItem.swift */; };
+		AB7CC58D21F9E86E00BA3CED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7CC58C21F9E86E00BA3CED /* Extensions.swift */; };
 		F834BC5BCE418BB96A09FF7B /* Pods_ToDo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8D2539E0B4FFC7FE509A22D /* Pods_ToDo_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		AB7CC58221F9BE7800BA3CED /* ToDo_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDo_App.entitlements; sourceTree = "<group>"; };
 		AB7CC58821F9D35E00BA3CED /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		AB7CC58A21F9DAD300BA3CED /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		AB7CC58C21F9E86E00BA3CED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C57F3E9627ECD9F4B93A28B4 /* Pods-ToDo App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo App.debug.xcconfig"; path = "Target Support Files/Pods-ToDo App/Pods-ToDo App.debug.xcconfig"; sourceTree = "<group>"; };
 		F8D2539E0B4FFC7FE509A22D /* Pods_ToDo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				AB7CC57E21F9BE7800BA3CED /* Main.storyboard */,
 				AB7CC58121F9BE7800BA3CED /* Info.plist */,
 				AB7CC58221F9BE7800BA3CED /* ToDo_App.entitlements */,
+				AB7CC58C21F9E86E00BA3CED /* Extensions.swift */,
 			);
 			path = "ToDo App";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB7CC58D21F9E86E00BA3CED /* Extensions.swift in Sources */,
 				AB7CC57B21F9BE7600BA3CED /* ViewController.swift in Sources */,
 				AB7CC58921F9D35E00BA3CED /* RealmService.swift in Sources */,
 				AB7CC58B21F9DAD300BA3CED /* ToDoItem.swift in Sources */,
