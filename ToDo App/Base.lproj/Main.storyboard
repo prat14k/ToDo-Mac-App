@@ -849,16 +849,29 @@
                                             <action selector="addItemBtnClicked:" target="XfG-lQ-9wD" id="dOW-ht-adT"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="X7K-qA-qWw">
+                                        <rect key="frame" x="-6" y="3" width="222" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="v5c-Du-3mt">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="deleteItemTapped:" target="XfG-lQ-9wD" id="Rou-7I-h77"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1Af-ZD-RCr" firstAttribute="top" secondItem="OTP-b6-nEv" secondAttribute="top" id="5vp-OQ-k3c"/>
                                     <constraint firstAttribute="trailing" secondItem="fAX-bA-gaq" secondAttribute="trailing" id="7oA-nj-5RL"/>
+                                    <constraint firstAttribute="trailing" secondItem="X7K-qA-qWw" secondAttribute="trailing" id="Bgq-Qf-uH2"/>
                                     <constraint firstAttribute="trailing" secondItem="1Af-ZD-RCr" secondAttribute="trailing" id="Dwk-kA-kaD"/>
                                     <constraint firstAttribute="trailing" secondItem="s16-Cu-KHI" secondAttribute="trailing" id="JOT-9h-ZEa"/>
+                                    <constraint firstItem="X7K-qA-qWw" firstAttribute="leading" secondItem="OTP-b6-nEv" secondAttribute="leading" id="Kwn-Bq-VQc"/>
                                     <constraint firstItem="fAX-bA-gaq" firstAttribute="leading" secondItem="OTP-b6-nEv" secondAttribute="leading" id="TKa-kx-x8I"/>
                                     <constraint firstItem="s16-Cu-KHI" firstAttribute="centerY" secondItem="WTB-K9-YKq" secondAttribute="centerY" id="Wco-11-NkM"/>
                                     <constraint firstItem="WTB-K9-YKq" firstAttribute="leading" secondItem="OTP-b6-nEv" secondAttribute="leading" constant="7" id="ZyO-CY-Jzw"/>
                                     <constraint firstItem="fAX-bA-gaq" firstAttribute="top" secondItem="1Af-ZD-RCr" secondAttribute="bottom" constant="10" id="c2D-mE-bab"/>
+                                    <constraint firstAttribute="bottom" secondItem="X7K-qA-qWw" secondAttribute="bottom" constant="10" id="cOi-eO-GyH"/>
                                     <constraint firstItem="WTB-K9-YKq" firstAttribute="top" secondItem="fAX-bA-gaq" secondAttribute="bottom" constant="15" id="uoQ-Dc-68V"/>
                                     <constraint firstItem="1Af-ZD-RCr" firstAttribute="leading" secondItem="OTP-b6-nEv" secondAttribute="leading" id="wQb-zn-t1b"/>
                                 </constraints>
@@ -876,6 +889,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteItemButton" destination="X7K-qA-qWw" id="xtl-dO-tW2"/>
                         <outlet property="markNewItemImpButton" destination="WTB-K9-YKq" id="ZGP-z3-6bZ"/>
                         <outlet property="newItemTextField" destination="fAX-bA-gaq" id="wdB-NZ-bcg"/>
                         <outlet property="tableView" destination="2Qp-L2-U8S" id="eh2-GY-xr0"/>

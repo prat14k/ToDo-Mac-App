@@ -19,6 +19,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak private var newItemTextField: NSTextField!
     @IBOutlet weak private var markNewItemImpButton: NSButton!
+    @IBOutlet weak private var deleteItemButton: NSButton!
     @IBOutlet weak private var tableView: NSTableView!
     
     private var todoItems = [ToDoItem]()
@@ -67,9 +68,22 @@ extension ViewController {
         }
     }
     
+    @IBAction private func deleteItemTapped(_ sender: NSButton) {
+        guard tableView.selectedRow >= 0  else { return }
+        let item = todoItems.remove(at: tableView.selectedRow)
+        do {
+            try RealmService.shared.delete(object: item)
+            tableView.removeRows(at: IndexSet(integer: tableView.selectedRow), withAnimation: .effectFade)
+            showAlert(title: "Item Deleted", message: "Item have been successfully deleted from the list", style: .informational)
+        } catch {
+            showAlert(title: "Unable to delete item", message: error.localizedDescription, style: .critical)
+        }
+    }
+    
 }
 
 extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
+    
     // MARK: Load Cells in Table
     func numberOfRows(in tableView: NSTableView) -> Int {
         return todoItems.count
@@ -93,6 +107,10 @@ extension ViewController: NSTableViewDataSource, NSTableViewDelegate {
         cellView?.textField?.stringValue = title
         
         return cellView
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        deleteItemButton.isHidden = tableView.selectedRow < 0
     }
     
 }
